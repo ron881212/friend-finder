@@ -7,9 +7,13 @@ module.exports = function(app) {
   });
 
   app.post("/api/friends", function(req, res) {
-
-
-    res.json({ ok: true });
+    $("#submit").on("click", function(event) {
+        event.preventDefault();
+        if (validateForm()) {
+            friendArray.push(req.body);
+            res.json(true);
+        }
+    })
   });
 };
 
