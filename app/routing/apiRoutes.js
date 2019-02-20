@@ -37,7 +37,7 @@ module.exports = function(app) {
         if(macthDiff <= bestMatch.friendDiff){
             bestMatch.name = friends[i].name
             bestMatch.photo = friends[i].photo
-            bestMatch.friendDiff = friends[i].macthDiff;
+            bestMatch.friendDiff = macthDiff;
         }
     }
     friends.push(userData);
