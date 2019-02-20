@@ -205,7 +205,7 @@
           // If all required fields are filled
           if (validateForm()) {
             // Create an object for the user"s data
-            var userData = {
+            let userData = {
               name: $("#name").val(),
               photo: $("#photo").val(),
               scores: [
@@ -221,7 +221,7 @@
                 $("#q10").val()
               ]
             };
-    
+            
             // AJAX post the data to the friends API.
             $.post("/api/friends", userData, function(data) {
     
